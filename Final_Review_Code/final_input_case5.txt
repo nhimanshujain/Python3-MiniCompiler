@@ -1,0 +1,11 @@
+import math
+import re
+
+a = 10
+b = 200
+d = 20
+f = a / 2
+
+if a==3:
+print(a)
+	a = b

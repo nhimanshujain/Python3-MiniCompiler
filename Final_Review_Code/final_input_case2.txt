@@ -1,0 +1,23 @@
+c = 50
+d = 40
+g = 100
+a = 10
+b = 20
+while a==b:
+	a = a + b
+	b = b - a
+	print("hello")
+	while b==c:
+		print("efghi")
+		print("abghjk")
+		while(b==c):
+			print("Happy")
+			while(b!=c):
+				print("Sad")
+				if(a==b):
+					print(d)
+			a = b + c
+		d = g
+	a = b
+c = d
+a = b + d

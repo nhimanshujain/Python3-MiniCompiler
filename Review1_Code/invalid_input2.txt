@@ -1,0 +1,8 @@
+if(a==b):
+	print(10)
+	fi(a==b):
+		pass
+else:
+	print(20)
+	
+#Done---------

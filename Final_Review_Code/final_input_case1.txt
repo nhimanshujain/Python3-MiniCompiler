@@ -1,0 +1,25 @@
+import math
+import re
+
+a = 10
+b = 200
+d = 20
+f = a / 2
+
+if a==3:
+	print(a)
+	a = b
+	while(a < b):
+		print(e)
+		break
+		a = a + 1
+elif(a == 2):
+	print(b)
+	return y
+else:
+	print(c)
+	a = a + b
+
+a = True or False
+c = d
+e = a * f

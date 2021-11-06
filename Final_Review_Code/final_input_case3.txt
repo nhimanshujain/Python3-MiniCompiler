@@ -1,0 +1,21 @@
+import math
+a = 50
+b = 30
+a > b
+c = 80
+e = 40
+c < e
+(a+b) == (c+d)
+(not b)
+not ((a >= b) and a < b)
+c = a + b * 5 / (10 % 30)
+d = c - b
+print("Hello World")
+return a
+pass
+break
+a = [1,2,3,4,5]
+c = b[10]
+b[11] = d
+range(10)
+range(10,20)

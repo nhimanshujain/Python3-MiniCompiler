@@ -1,0 +1,21 @@
+while(a==b):
+	if(a<=b):
+		i=i+b
+	else:
+		for i in range(10,20):
+			while(a!=b):
+				if a<b:
+					return
+				elif a!=b
+					print(20)
+				else:
+					if(k>=l):
+						break
+					else:
+						if(k<=l):
+							pass
+						for i in k:
+							if(h==2):
+								l=a[i]
+a=(10+20/30*40+(500))
+b=a+b-c+d/f*g

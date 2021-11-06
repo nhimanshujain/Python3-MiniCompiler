@@ -1,0 +1,22 @@
+e = 5
+f = 6
+d = 7
+r = (e + f)*(d - f) # r = 11 (Constant Folding)
+
+a = 1
+b = (a * 2) + a    # b = 3  (Constant Propagation)
+
+c = True or False  
+d = c + b          # c = 1; d = 4 (Constant Propagation)
+
+f = e              # e is not defined
+
+e = 0
+d = f/e             #Divide by zero error
+
+e = 2
+f = (True and (False or True))
+f = f + (d / e)    # f = 3
+
+h = "Hello"
+i = h        

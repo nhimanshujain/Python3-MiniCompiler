@@ -1,0 +1,115 @@
+T_Import T_Package 
+T_Nl  T_Import T_Package 
+T_Nl  T_Id T_Asgn T_Num 
+T_Nl  T_Id T_Asgn T_Num 
+T_Nl  T_Id T_Asgn T_Num 
+T_Nl  T_Id T_Asgn T_Id T_Div T_Num 
+T_Nl  T_If T_Id T_Eq T_Num T_Colon 
+T_Nl  T_ID T_Print T_Op T_Id T_Cp 
+T_Nl  T_ND T_Id T_Asgn T_Id 
+T_Nl  T_ND T_While T_Op T_Id T_Lt T_Id T_Cp T_Colon 
+T_Nl  T_ID T_Print T_Op T_Id T_Cp 
+T_Nl  T_ND T_Break 
+T_Nl  T_ND T_Id T_Asgn T_Id T_Plus T_Num 
+T_Nl  T_Elif T_Op T_Id T_Eq T_Num T_Cp T_Colon 
+T_Nl  T_ID T_Print T_Op T_Id T_Cp 
+T_Nl  T_ND T_Return T_Id 
+T_Nl  T_Else T_Colon 
+T_Nl  T_ID T_Print T_Op T_Id T_Cp 
+T_Nl  T_ND T_Id T_Asgn T_Id T_Plus T_Id 
+T_Nl  T_Id T_Asgn T_True T_Or T_False 
+T_Nl  T_Id T_Asgn T_Id 
+T_Nl  T_Id T_Asgn T_Id T_Mul T_Id 
+T_Nl  T_EOF 
+VALID
+
+			 SYMBOL TABLE
+
+	 NAME	   DATATYPE	 VALUE		 LINENO
+
+	 a	   BLN		 1      	 [4,11,15,22,22]
+	 b	   INT		 200      	 [5]
+	 d	   INT		 20      	 [6]
+	 t1	   INT		 5      	 [6]
+	 f	   INT		 5      	 [8]
+	 t2	   BLR		 0      	 [8]
+	 t3	   BLR		 0      	 [11]
+	 t4	   INT		 201      	 [15]
+	 t5	   BLR		 0      	 [15]
+	 t6	   INT		 401      	 [22]
+	 t7	   BLR		 1      	 [22]
+	 c	   INT		 20      	 [24]
+	 t8	   INT		 5      	 [25]
+	 e	   INT		 5      	 [25]
+
+Note : The line number of temporaries is wrt 3AC
+
+
+
+-------------Three Address Code in Quadraple Format-------------
+
+		Op	Arg1	Arg2	Res
+	1	import	NULL	NULL	math
+	2	import	NULL	NULL	re
+	3	=	10	NULL	a
+	4	=	200	NULL	b
+	5	=	20	NULL	d
+	6	/	a	2	t1
+	7	=	t1	NULL	f
+	8	==	a	3	t2
+	9	iffalse	t2	NULL	L5
+	10	print	NULL	NULL	a
+	11	=	b	NULL	a
+	12	label	NULL	NULL	L2
+	13	<	a	b	t3
+	14	iffalse	t3	NULL	L1
+	15	print	NULL	NULL	e
+	16	break	NULL	NULL	NULL
+	17	+	a	1	t4
+	18	=	t4	NULL	a
+	19	goto	NULL	NULL	L2
+	20	label	NULL	NULL	L1
+	21	goto	NULL	NULL	L3
+	22	label	NULL	NULL	L5
+	23	==	a	2	t5
+	24	iffalse	t5	NULL	L4
+	25	print	NULL	NULL	b
+	26	return	y	NULL	NULL
+	27	goto	NULL	NULL	L3
+	28	label	NULL	NULL	L4
+	29	print	NULL	NULL	c
+	30	+	a	b	t6
+	31	=	t6	NULL	a
+	32	label	NULL	NULL	L3
+	33	or	True	False	t7
+	34	=	t7	NULL	a
+	35	=	d	NULL	c
+	36	*	a	f	t8
+	37	=	t8	NULL	e
+
+
+-------------Post Dead Code Elimination -------------
+
+
+-------------Three Address Code in Quadraple Format-------------
+
+		Op	Arg1	Arg2	Res
+	1	=	10	NULL	a
+	2	=	200	NULL	b
+	3	=	20	NULL	d
+	4	/	a	2	t1
+	5	=	t1	NULL	f
+	6	==	a	3	t2
+	7	label	NULL	NULL	L5
+	8	==	a	2	t5
+	9	label	NULL	NULL	L4
+	10	print	NULL	NULL	c
+	11	+	a	b	t6
+	12	=	t6	NULL	a
+	13	label	NULL	NULL	L3
+	14	or	True	False	t7
+	15	=	t7	NULL	a
+	16	=	d	NULL	c
+	17	*	a	f	t8
+	18	=	t8	NULL	e
+
